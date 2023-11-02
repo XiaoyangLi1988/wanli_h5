@@ -1,7 +1,7 @@
 {
-  "name": "react-board",
+  "name": "wanli_homepage",
   "version": "1.0.0",
-  "description": "react 项目模板",
+  "description": "手机官网",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.js",
@@ -11,7 +11,7 @@
     "react",
     "tempalate"
   ],
-  "author": "Mondo",
+  "author": "lixiaoyang",
   "license": "ISC",
   "dependencies": {
     "antd-mobile": "^2.3.3",

@@ -54,22 +54,17 @@ module.exports = {
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'React Board',
+      title: '万利集团',
       template: 'public/index.html',
       filename: 'index.html',
       files: {
         js: [
-          '//unpkg.com/swiper/js/swiper.min.js',
-          '//cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js'
+
         ],
         css: [
-          '//unpkg.com/swiper/css/swiper.min.css'
+
         ]
       }
     })
   ],
-  externals: {
-    vue: 'Vue',
-    swiper: 'Swiper'
-  }
 }

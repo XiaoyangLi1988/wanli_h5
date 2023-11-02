@@ -3,7 +3,7 @@ const { smart } = require('webpack-merge')
 const base = require('./webpack.base.js')
 const config = require('./../config')
 
-const PORT = process.env.PORT || 1220
+const PORT = process.env.PORT || 8888
 
 const devConfig = {
   mode: config.dev.NODE_ENV,
@@ -14,6 +14,7 @@ const devConfig = {
     port: PORT,
     hot: true,
     open: true,
+    host: '0.0.0.0',
     historyApiFallback: true
   },
   plugins: [
