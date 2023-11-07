@@ -26,6 +26,40 @@
   <% for (var i in htmlWebpackPlugin.options.files.js) { %>
   <script type="text/javascript" src="<%= htmlWebpackPlugin.options.files.js[i] %>"></script>
   <% } %>
+  <script>
+    // JavaScript 代码，用于预加载图片
+    const imageSources = [
+      // '#/src/img/center/center01.png',
+      // '#/src/img/center/center02.png',
+      // '#/src/img/center/center03.png',
+      // '#/src/img/center/center04.png',
+      // '#/src/img/center/center05.png',
+      // '#/src/img/center/centermid.png',
+      // '#/src/img/center/centernav.png',
+      // '#/src/img/hotel/hotel01.png',
+      // '#/src/img/hotel/hotelnav.png',
+      // '#/src/img/medicine/medicine01.png',
+      // '#/src/img/medicine/medicinenav.png',
+      // '#/src/img/metal/metal01.png',
+      // '#/src/img/metal/metal02.png',
+      // '#/src/img/metal/metal03.png',
+      // '#/src/img/metal/metalnav.png',
+      // '#/src/img/news/news01.png',
+      // '#/src/img/news/newsnav.png',
+    ];
+    const preloadedImages = [];
+
+    function preloadImages() {
+      for (const src of imageSources) {
+        const img = new Image();
+        img.src = src;
+        preloadedImages.push(img);
+      }
+    }
+
+    // 调用预加载函数
+    preloadImages();
+  </script>
 </body>
 
 </html>

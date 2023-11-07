@@ -20,6 +20,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto"
+      },
+      {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/
@@ -37,7 +42,6 @@ module.exports = {
         test: /.(png|jpg|gif|svg)$/,
         loader: 'url-loader',
         options: {
-          limit: 1000,
           name: '[name].[ext]?[hash]'
         }
       }

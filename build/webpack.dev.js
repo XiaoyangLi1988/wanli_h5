@@ -14,6 +14,7 @@ const devConfig = {
     port: PORT,
     hot: true,
     open: true,
+    openPage: `http://localhost:${PORT}/`,
     host: '0.0.0.0',
     historyApiFallback: true
   },
