@@ -2,6 +2,8 @@ const webpack = require('webpack')
 const { smart } = require('webpack-merge')
 const base = require('./webpack.base.js')
 const config = require('./../config')
+const path = require('path')
+const resolve = dir => path.resolve(__dirname, dir)
 
 const PORT = process.env.PORT || 8888
 
@@ -9,8 +11,7 @@ const devConfig = {
   mode: config.dev.NODE_ENV,
   devtool: 'source-map',
   devServer: {
-    stats: 'errors-only',
-    contentBase: "./dist",
+    publicPath: resolve('/'),
     port: PORT,
     hot: true,
     open: true,

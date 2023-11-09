@@ -2,35 +2,16 @@ import React, { useState, useRef } from 'react';
 // Direct React component imports
 import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
 import { Autoplay, Scrollbar, EffectCoverflow }  from 'swiper/modules/index.min.mjs';
+import { useTranslation, Trans } from 'react-i18next';
 // Styles must use direct files imports
 import 'swiper/swiper.less'; // core Swiper
 import 'swiper/modules/scrollbar.less'; //scrollbar style
 import 'swiper/modules/effect-coverflow.less'; // effect style
 
-import lunbo1 from '../../img/about/lunbo01.jpg';
-import lunbo2 from '../../img/about/lunbo02.jpg';
-import lunbo3 from '../../img/about/lunbo03.jpg';
-import aboutus from '../../img/about/aboutus.jpg';
-import wanli from '../../img/about/wanli.png';
-import news from '../../img/about/news.png';
-import location from '../../img/about/location.png';
-import lunbotip1 from '../../img/about/lunbotip1.png';
-import lunbotip2 from '../../img/about/lunbotip2.png';
-import lunbotip3 from '../../img/about/lunbotip3.png';
-import center1 from '../../img/about/center1.png';
-import center2 from '../../img/about/center2.png';
-import center3 from '../../img/about/center3.png';
-import center4 from '../../img/about/center4.png';
-import center5 from '../../img/about/center5.png';
-import center6 from '../../img/about/center6.png';
-import metal from '../../img/about/metal.png';
-import hotel from '../../img/about/hotel.png';
-import center from '../../img/about/center.png';
-import biological from '../../img/about/biological.png';
-
 function Home() {
   const midSwiperRef = useRef();
   const botSwiperRef = useRef();
+  const { i18n } = useTranslation();
   const [swiperIndex, setSwiperIndex] = useState(0);
   return (
     <div className="home-page-wrapper">
@@ -50,25 +31,25 @@ function Home() {
       >
         <SwiperSlide>
           <div className="lunbo-wrapper">
-            {swiperIndex === 0 && <img className="lunbo-text1 fade-in" alt="" src={lunbotip1}/>}
-            <img className="lunbo-img" alt="" src={lunbo1}/>
+            {swiperIndex === 0 && <img className="lunbo-text1 fade-in" alt="" src="/src/img/about/lunbotip1.png"/>}
+            <img className="lunbo-img" alt="" src="/src/img/about/lunbo01.jpg"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="lunbo-wrapper">
-            {swiperIndex === 1 && <img className="lunbo-text2 fade-in" alt="" src={lunbotip2}/>}
-            <img className="lunbo-img" alt="" src={lunbo2}/>
+            {swiperIndex === 1 && <img className="lunbo-text2 fade-in" alt="" src="/src/img/about/lunbotip2.png"/>}
+            <img className="lunbo-img" alt="" src="/src/img/about/lunbo02.jpg"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="lunbo-wrapper">
-            {swiperIndex === 2 && <img className="lunbo-text3 fade-in" alt="" src={lunbotip3}/>}
-            <img className="lunbo-img" alt="" src={lunbo3}/>
+            {swiperIndex === 2 && <img className="lunbo-text3 fade-in" alt="" src="/src/img/about/lunbotip3.png"/>}
+            <img className="lunbo-img" alt="" src="/src/img/about/lunbo03.jpg"/>
           </div>
         </SwiperSlide>
       </Swiper>
       <div className="mid-swiper-box">
-        <img alt="" src={aboutus}/>
+        <img alt="" src={i18n.language === 'zh' ? '/src/img/about/aboutus.jpg' : '/src/img/aboutEn/aboutus.jpg'} />
         <div className="business-swiper">
           <span onClick={() => midSwiperRef.current.slidePrev()}/>
           <Swiper
@@ -79,14 +60,14 @@ function Home() {
           >
             <SwiperSlide>
               <div className="mid-swiper">
-                <img alt="" src={metal}/>
-                <img alt="" src={hotel}/>
-                <img alt="" src={center}/>
+                <img alt="" src={i18n.language === 'zh' ? '/src/img/about/metal.png' : '/src/img/aboutEn/metal.png'}/>
+                <img alt="" src={i18n.language === 'zh' ? '/src/img/about/hotel.png' : '/src/img/aboutEn/hotel.png'}/>
+                <img alt="" src={i18n.language === 'zh' ? '/src/img/about/center.png' : '/src/img/aboutEn/center.png'}/>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mid-swiper">
-                <img alt="" src={biological}/>
+                <img alt="" src={i18n.language === 'zh' ? '/src/img/about/biological.png' : '/src/img/aboutEn/biological.png'}/>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -94,8 +75,8 @@ function Home() {
         </div>
       </div>
       <div className="mid-swiper-box">
-        <img alt="" src={wanli}/>
-        <img alt="" src={news} style={{ marginTop: -8 }}/>
+        <img alt="" src={i18n.language === 'zh' ? '/src/img/about/wanli.png' : '/src/img/aboutEn/wanli.png'} />
+        <img alt="" src={i18n.language === 'zh' ? '/src/img/about/news.png' : '/src/img/aboutEn/news.png'} style={{ marginTop: -8 }}/>
         <div className="center-swiper">
           <span onClick={() => botSwiperRef.current.slidePrev()}/>
           <Swiper
@@ -115,29 +96,30 @@ function Home() {
             }}
           >
             <SwiperSlide>
-              <img alt="" src={center1} />
+              <img alt="" src="/src/img/about/center1.png" />
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="" src={center2} />
+              <img alt="" src="/src/img/about/center2.png" />
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="" src={center3} />
+              <img alt="" src="/src/img/about/center3.png" />
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="" src={center4} />
+              <img alt="" src="/src/img/about/center4.png" />
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="" src={center5} />
+              <img alt="" src="/src/img/about/center5.png" />
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="" src={center6} />
+              <img alt="" src="/src/img/about/center6.png" />
             </SwiperSlide>
           </Swiper>
           <span onClick={() => botSwiperRef.current.slideNext()} />
         </div>
       </div>
       <div className="location">
-        <img alt="" src={location}/>
+        <img alt="" src={i18n.language === 'zh' ? '/src/img/about/location.png' : '/src/img/aboutEn/location.png'}/>
+        <div>{i18n.language}</div>
       </div>
     </div>
   )

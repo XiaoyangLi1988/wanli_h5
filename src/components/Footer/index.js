@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
-import wincenter from '../../img/wincenter.png';
-import tubiao from '../../img/tubiao.png';
 
 function Footer() {
   const history = useHistory();
   const { t, i18n } = useTranslation();
-  const lang = i18n.language;
+
+  useEffect(() => {
+    i18n.changeLanguage('zh');
+  }, [])
+
   return (
     <footer>
       <div style={{textAlign: 'center' }}>
@@ -39,9 +41,9 @@ function Footer() {
             </ul>
           </div>
           <div className="footer-footer">
-            <img alt="" src={wincenter}/>
+            <img alt="" src="/src/img/wincenter.png"/>
             <div>
-              <img alt="" src={tubiao}/>
+              <img alt="" src="/src/img/tubiao.png"/>
             </div>
           </div>
         </div>

@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import nav from "../../img/metal/metalnav.jpg";
-import img1 from "../../img/metal/metal01.png";
-import img2 from "../../img/metal/metal02.png";
-import img3 from "../../img/metal/metal03.png";
+import {useTranslation} from "react-i18next";
 
 function Metal() {
+  const { i18n } = useTranslation();
   return (
     <div className="feature-content">
-      <img className="content-image" alt="" src={nav}/>
-      <div style={{ width: '50%', margin: '100px 0' }}>
-        <img className="content-image" alt="" src={img1}/>
+      <img className="content-image" alt="" src="/src/img/metal/metalnav.jpg"/>
+      <div style={{ width: '70%', margin: '100px 0' }}>
+        <img className="content-image" alt="" src={i18n.language === 'zh' ? '/src/img/metal/metal01.png' : '/src/img/metalEn/metal01.png'}/>
       </div>
-      <div style={{ width: '50%', marginBottom: 100 }}>
-        <img className="content-image" alt="" src={img2}/>
+      <div style={{ width: '70%', marginBottom: 100 }}>
+        <img className="content-image" alt="" src={i18n.language === 'zh' ? '/src/img/metal/metal02.png' : '/src/img/metalEn/metal02.png'}/>
       </div>
-      <img className="content-image" alt="" src={img3}/>
+      <img className="content-image" alt="" src={i18n.language === 'zh' ? '/src/img/metal/metal03.png' : '/src/img/metalEn/metal03.png'}/>
     </div>
   )
 }

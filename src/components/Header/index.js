@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
-import logo1 from '../../img/logo1.png';
-import logo from '../../img/logo.png';
 
 function Header(props) {
   const history = useHistory();
   const { t, i18n } = useTranslation();
   const [opacity, setOpacity] = useState();
-  const [hash, setHash] = useState(location.hash.split('#')[1]);
+  const [hash, setHash] = useState(location.pathname);
   const hashRef = useRef();
   hashRef.current = hash;
   useEffect(() => {
@@ -40,8 +38,8 @@ function Header(props) {
               href=""
               style={
                 opacity > 0.8 ?
-                  { backgroundImage: "url(" + logo1 + ")" } :
-                  { backgroundImage: "url(" + logo + ")" }
+                  { backgroundImage: 'url(src/img/logo1.png)' } :
+                  { backgroundImage: 'url(src/img/logo.png)' }
               }
             />
           </div>
