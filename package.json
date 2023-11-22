@@ -1,7 +1,7 @@
 {
   "name": "wanli_homepage",
   "version": "1.0.0",
-  "description": "手机官网",
+  "description": "官网",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.js",
@@ -16,6 +16,8 @@
   "dependencies": {
     "antd-mobile": "^2.3.3",
     "axios": "^0.19.2",
+    "classnames": "^2.3.2",
+    "html-loader": "^4.2.0",
     "i18next": "^23.6.0",
     "i18next-browser-languagedetector": "^7.1.0",
     "path": "^0.12.7",
@@ -26,6 +28,7 @@
     "react-redux": "^7.2.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",
+    "react-slick": "^0.29.0",
     "redux": "^4.0.5",
     "swiper": "^10.0.0"
   },

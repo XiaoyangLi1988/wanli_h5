@@ -16,7 +16,7 @@ function Footer() {
         <div className="footer-box clearfix">
           <div className="footer-left">
             <span className="globle" />
-            <span>{t('address')}</span>
+            <p>{t('address')}</p>
           </div>
           <div className="footer-right">
             <ul>
@@ -43,7 +43,15 @@ function Footer() {
           <div className="footer-footer">
             <img alt="" src="/src/img/wincenter.png"/>
             <div>
-              <img alt="" src="/src/img/tubiao.png"/>
+              {/*<img alt="" src="/src/img/tubiao.png"/>*/}
+              {/*<div>*/}
+              {/*  <span onClick={() => {*/}
+              {/*    console.log('weibo');*/}
+              {/*  }}/>*/}
+              {/*  <span onClick={() => {*/}
+              {/*    console.log('weixin');*/}
+              {/*  }}/>*/}
+              {/*</div>*/}
             </div>
           </div>
         </div>

@@ -1,0 +1,126 @@
+.img-switcher-wrapper {
+  width: 100% ;
+
+  & > section {
+    display: flex;
+
+    & > div {
+      flex: 1;
+    }
+
+    .left-img-box {
+      position: relative;
+
+      & > img {
+        opacity: 0.2;
+        width: 170px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      & > div {
+        position: absolute;
+        top: 80px;
+        text-align: right;
+
+        img {
+          margin-bottom: 38px;
+          width: 230px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+          font-family: PingFang SC;
+          font-weight: 300;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .mid-img-box {
+      margin: 0 30px;
+      padding: 16px 0;
+      text-align: center;
+
+      & > img {
+        width: 240px;
+      }
+    }
+
+    .right-img-box {
+      position: relative;
+
+      & > img {
+        opacity: 0.2;
+        width: 170px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      & > div {
+        position: absolute;
+        bottom: 120px;
+
+        img {
+          margin-top: 38px;
+          width: 230px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+          font-family: PingFang SC;
+          font-weight: 300;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  .bottom-buttons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+
+    .arrow-control {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      cursor: pointer;
+
+      img {
+        width: 32px;
+      }
+    }
+
+    .arrow-icon {
+      padding: 0 50px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 62px;
+        height: 60px;
+      }
+
+      span {
+        width: 8px;
+        height: 8px;
+        border: 1px solid #9E7645;
+        border-radius: 50%;
+
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+
+      .active {
+        background: #9E7645;
+      }
+    }
+  }
+}

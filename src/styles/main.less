@@ -2,7 +2,7 @@
 body{
   font-family: "Microsoft Yahei";
   width: 100%;
-  min-width: 1200px;
+  min-width: 1300px;
 }
 /*header头部样式*/
 header {
@@ -20,18 +20,25 @@ header .header-container {
 header .header-container .nav-box {
   height: 42px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  padding: 0 20%;
+  margin-top: 30px;
+
+  .nav-black a:hover, .lang-btn-black span:hover {
+    color: #333 !important;
+  }
+
+  .nav-white a:hover, .lang-btn-white span:hover{
+    color: #fff !important;
+  }
 }
 header .header-container .nav-box .nav-left {
-  transform: translateY(6px);
+  //transform: translateY(6px);
 }
 header .header-container .nav-box .nav-left #logo_top {
   display: inline-block;
-  width: 70px;
-  height: 20px;
+  width: 80px;
+  height: 24px;
   background-image: url("../img/logo.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -41,13 +48,15 @@ header .header-container .nav-box .nav-mid {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: 240px;
 }
 header .header-container .nav-box .nav-mid .navbar-nav {
   position: relative;
   padding: 0;
+  margin: 0;
 }
 header .header-container .nav-box .nav-mid .navbar-nav li {
-  margin: 0 0 0 16px;
+  margin: 0 0 0 60px;
   text-align: center;
   list-style: none;
   display: inline-block;
@@ -55,9 +64,9 @@ header .header-container .nav-box .nav-mid .navbar-nav li {
 header .header-container .nav-box .nav-mid .navbar-nav li a {
   font-size: 12px;
   font-family: SourceHanSansSC;
-  color: #FEFEFE;
+  color: rgb(185, 185, 185);
   /*line-height: 59px;*/
-  padding: 10px 0;
+  padding: 10px 0 20px;
   margin: 0;
   display: inline-block;
   box-sizing: border-box;
@@ -69,11 +78,13 @@ header .header-container .nav-box .nav-mid .navbar-nav li a {
 }
 
 .lang-btn {
-  margin-left: 28px;
+  margin-left: 60px;
   font-size: 12px;
   font-family: SourceHanSansSC;
   color: #FEFEFE;
   transform: translateY(-1px);
+  padding: 10px 0 20px;
+  color: rgb(185, 185, 185);
 }
 
 .lang-btn span {
@@ -91,7 +102,7 @@ header .header-container .nav-box .nav-mid .navbar-nav li a::after {
   height: 2px;
   background: #9e7645;
   position: absolute;
-  bottom: -2px;
+  bottom: 2px;
   opacity: 0.3;
   left: -1px;
   width: calc(102%);
@@ -104,12 +115,24 @@ header .header-container .nav-box .nav-mid .navbar-nav li a:hover::after {
   -webkit-transform: scaleX(1);
 }
 header .header-container .nav-box .nav-mid .navbar-nav li a.active {
-  border-bottom: 2px solid #9e7645;
-  box-sizing: border-box;
-  color: #fff;
+  //border-bottom: 2px solid #9e7645;
+  //box-sizing: border-box;
+  //color: #fff;
 }
+
+.active-black {
+  color: #333 !important;
+}
+
+.active-white {
+  color: #fff !important;
+}
+
 header .header-container .nav-box .nav-mid .navbar-nav li a.active:hover::after {
-  display: none;
+  //display: none;
+  opacity: 1;
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
 }
 header .header-container .nav-box .nav-mid .navbar-nav li.last {
   margin-right: 0;
@@ -141,22 +164,26 @@ footer .footer-box{
 footer .footer-left{
   display: inline-flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 10px;
   color: #9e7645;
   padding: 40px 100px 40px 0;
   border-right: 1px solid #9e7645;
-  width: 528px;
+  width: 540px;
   box-sizing: border-box;
 
-  span {
+  p {
     text-align: left;
+    line-height: 20px;
+    word-break: break-all;
   }
 }
 
 footer .footer-right{
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
   padding: 40px 0;
-  width: 500px;
+  width: 540px;
   box-sizing: border-box;
 }
 
@@ -165,20 +192,25 @@ footer .footer-right ul{
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  padding: 0 0 0 15px;
+  padding: 0 0 0 96px;
+
+  li {
+    list-style: none;
+  }
 }
 footer .globle{
-  width: 100px;
-  height: 18px;
+  width: 140px;
+  height: 24px;
   margin-right: 100px;
   background-image: url(../img/cellnumber.png);
   background-repeat: no-repeat;
   background-size: contain;
+  flex-shrink: 0;
 }
 
 footer ul li a{
   color: #9e7645;
-  font-size: 12px;
+  font-size: 10px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -201,15 +233,34 @@ footer .footer-box .footer-footer {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 footer .footer-footer >img {
   width: 74px;
 }
 
+footer .footer-footer >div {
+  position: relative;
+}
+
 footer .footer-footer >div img{
   height: 20px;
+}
+
+footer .footer-footer >div div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  span {
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+  }
 }
 
 /*移动端菜单入口*/
@@ -219,16 +270,32 @@ footer .footer-footer >div img{
 
 
 /*响应式媒体查询处理*/
-@media screen  and (max-width: 1200px) {
+@media screen  and (max-width: 1300px) {
+  header {
+    .nav-mid {
+      margin-left: 100px !important;
+    }
+  }
+}
 
+@media  screen  and (max-width: 1170px) {
+  header {
+    .nav-mid {
+      ul {
+        li {
+          margin-left: 30px !important;
+        }
+      }
+    }
+  }
 }
 
 @media  screen  and (max-width: 970px) {
-
-}
-
-@media  screen  and (max-width: 830px) {
-
+  header {
+    .nav-mid {
+      margin-left: 50px !important;
+    }
+  }
 }
 /*移动端兼容*/
 @media  screen  and (max-width: 740px) {

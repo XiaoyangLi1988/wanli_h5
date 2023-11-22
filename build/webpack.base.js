@@ -41,7 +41,7 @@ module.exports = {
         test: /.(png|jpg|gif|svg)$/,
         loader: 'url-loader',
         options: {
-          name: '[name].[ext]?[hash]'
+          name: 'images/[name].[ext]?[hash]'
         }
       }
     ]
@@ -57,7 +57,9 @@ module.exports = {
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: '万利集团',
+      title: '万利中心｜北京首个EOD生态写字楼',
+      description: '万利中心是北京首个提出EOD生态办公区概念的楼宇，在北京CBD区域拥有0.8超低容积率的绿色办公环境，为客户提供舒适、便利的办公空间产品',
+      keywords: '写字楼，写字楼租赁，EOD，生态写字楼，大平层租赁',
       template: 'public/index.html',
       filename: 'index.html',
       files: {
@@ -65,7 +67,8 @@ module.exports = {
 
         ],
         css: [
-
+          'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+          'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
         ]
       }
     })

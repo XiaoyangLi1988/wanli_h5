@@ -43,15 +43,16 @@ function Header(props) {
               }
             />
           </div>
-          <div className="nav-mid">
+          <div className={opacity > 0.8 ? 'nav-mid nav-black' : 'nav-mid nav-white'}>
             <ul className="navbar-nav">
               <li>
                 <a
-                  className={hash === '/' ? 'active' : ''}
-                  style={
-                    opacity > 0.8 ?
-                      { color: '#333' } :
-                      { color: '#fefefe' }
+                  className={
+                    hash === '/' && opacity > 0.8 ?
+                      'active active-black' :
+                      hash === '/' ?
+                        'active active-white' :
+                        ''
                   }
                   onClick={() => {
                     history.replace('/')
@@ -62,11 +63,12 @@ function Header(props) {
               </li>
               <li>
                 <a
-                  className={hash === '/news' ? 'active' : ''}
-                  style={
-                    opacity > 0.8 ?
-                      { color: '#333' } :
-                      { color: '#fefefe' }
+                  className={
+                    hash === '/news' && opacity > 0.8 ?
+                      'active active-black' :
+                      hash === '/news' ?
+                        'active active-white' :
+                        ''
                   }
                   onClick={() => {
                     history.replace('/news');
@@ -77,11 +79,12 @@ function Header(props) {
               </li>
               <li>
                 <a
-                  className={hash === '/center' ? 'active' : ''}
-                  style={
-                    opacity > 0.8 ?
-                      { color: '#333' } :
-                      { color: '#fefefe' }
+                  className={
+                    hash === '/center' && opacity > 0.8 ?
+                      'active active-black' :
+                      hash === '/center' ?
+                        'active active-white' :
+                        ''
                   }
                   onClick={() => {
                     history.replace('/center')
@@ -92,11 +95,12 @@ function Header(props) {
               </li>
               <li>
                 <a
-                  className={hash === '/metal' ? 'active' : ''}
-                  style={
-                    opacity > 0.8 ?
-                      { color: '#333' } :
-                      { color: '#fefefe' }
+                  className={
+                    hash === '/metal' && opacity > 0.8 ?
+                      'active active-black' :
+                      hash === '/metal' ?
+                        'active active-white' :
+                        ''
                   }
                   onClick={() => {
                     history.replace('/metal')
@@ -107,11 +111,12 @@ function Header(props) {
               </li>
               <li>
                 <a
-                  className={hash === '/hotel' ? 'active' : ''}
-                  style={
-                    opacity > 0.8 ?
-                      { color: '#333' } :
-                      { color: '#fefefe' }
+                  className={
+                    hash === '/hotel' && opacity > 0.8 ?
+                      'active active-black' :
+                      hash === '/hotel' ?
+                        'active active-white' :
+                        ''
                   }
                   onClick={() => {
                     history.replace('/hotel')
@@ -122,11 +127,12 @@ function Header(props) {
               </li>
               <li>
                 <a
-                  className={hash === '/medicine' ? 'active' : ''}
-                  style={
-                    opacity > 0.8 ?
-                      { color: '#333' } :
-                      { color: '#fefefe' }
+                  className={
+                    hash === '/medicine' && opacity > 0.8 ?
+                      'active active-black' :
+                      hash === '/medicine' ?
+                        'active active-white' :
+                        ''
                   }
                   onClick={() => {
                     history.replace('/medicine')
@@ -137,12 +143,7 @@ function Header(props) {
               </li>
             </ul>
             <div
-              className="lang-btn"
-              style={
-                opacity > 0.8 ?
-                  { color: '#333' } :
-                  { color: '#fefefe' }
-              }
+              className={opacity > 0.8 ? 'lang-btn lang-btn-black' : 'lang-btn lang-btn-white'}
             >
               <span id="lang_cn" style={{marginRight: 8}} onClick={() => {
                 i18n.changeLanguage('zh');
