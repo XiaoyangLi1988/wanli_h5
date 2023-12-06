@@ -93,7 +93,7 @@ function Home() {
         >
           <SwiperSlide>
             <div className="lunbo-wrapper">
-              {swiperIndex === 0 && <img className="lunbo-text1 fade-in" alt="" src="/src/img/about/lunbotip1.png"/>}
+              {/*{swiperIndex === 0 && <img className="lunbo-text1 fade-in" alt="" src="/src/img/about/lunbotip1.png"/>}*/}
               <img className="lunbo-img" alt="" src="/src/img/about/lunbo01.jpg"/>
             </div>
           </SwiperSlide>
