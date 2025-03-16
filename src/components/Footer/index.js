@@ -42,16 +42,13 @@ function Footer() {
           </div>
           <div className="footer-footer">
             <img alt="" src="/src/img/wincenter.png"/>
-            <div>
-              {/*<img alt="" src="/src/img/tubiao.png"/>*/}
-              {/*<div>*/}
-              {/*  <span onClick={() => {*/}
-              {/*    console.log('weibo');*/}
-              {/*  }}/>*/}
-              {/*  <span onClick={() => {*/}
-              {/*    console.log('weixin');*/}
-              {/*  }}/>*/}
-              {/*</div>*/}
+            <div
+              className="footer-links"
+              onClick={() => {
+                window.location.href = "https://beian.miit.gov.cn";
+              }}
+            >
+              <span>京ICP备2025113999号</span>
             </div>
           </div>
         </div>
